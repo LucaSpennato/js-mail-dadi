@@ -7,16 +7,21 @@
 
 const emailList = ['luca.spennato@gmail.com', 'ciao@booleancareers.com', 'giangianni@hotmail.com'];
 const searchEmail = prompt ('inserisci la tua email');
-let verify = false;
+
+// se voglio trovare nel log esterno dopo il for, il numero di appartenenza dell'elemento dell'array
+// es.: giangianni etc.., imposto verify a -1, nell'if con verify=index, 
+// nel prompt inserisco l'esatto elemento il quale io sto cercando 
+// ed in ritorno avrà il suo numero di appartenenza, il suo numero di posizione, es giangianni n-2!
+let verify = 'La tua mail non è presente';
 
 for (let index = 0; index < emailList.length; index++) {
     
     let singleEmail = emailList[index];
     
     if (searchEmail === singleEmail){
-        verify = true;
-    }
+        verify = 'La tua mail è presente';
+    } 
     
 }
 
-console.log(verify);
+alert(verify);
