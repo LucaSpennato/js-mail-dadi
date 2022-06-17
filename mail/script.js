@@ -5,21 +5,18 @@
 // Che ci sia un array da qualche parte? Se dobbiamo confrontare qualcosa che "cosa" ci serve?
 
 
-const email = ['luca.spennato@gmail.com', 'ciao@booleancareers.com', 'giangianni@hotmail.com'];
+const emailList = ['luca.spennato@gmail.com', 'ciao@booleancareers.com', 'giangianni@hotmail.com'];
 const searchEmail = prompt ('inserisci la tua email');
-let verify;
+let verify = false;
 
-for (let index = 0; index < email.length; index++) {
+for (let index = 0; index < emailList.length; index++) {
     
-    verify = email[index];
-    // console.log(verify);
+    let singleEmail = emailList[index];
     
-    if (searchEmail === verify){
-        console.log('La tua email è presente!');
-    } else{
-        console.log('La tua email non è presente.')
+    if (searchEmail === singleEmail){
+        verify = true;
     }
     
 }
 
-
+console.log(verify);
