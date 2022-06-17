@@ -1,11 +1,13 @@
-const user = parseInt((Math.floor(Math.random() * 6) + 1));
-const computer = parseInt((Math.floor(Math.random() * 6) + 1));
-console.log(user, computer);
+
 
 let buttonPlay = document.getElementById('play');
 let result = document.getElementById('result');
 
 buttonPlay.addEventListener('click', function () {
+
+    const user = parseInt((Math.floor(Math.random() * 6) + 1));
+    const computer = parseInt((Math.floor(Math.random() * 6) + 1));
+
     if (user < computer) {
         result.innerHTML = `Il tuo numero: ${user} è più basso rispetto al numero del computer ${computer}, quindi hai perso!`
         console.log(`Il tuo numero: ${user} è più basso rispetto al numero del computer ${computer}, quindi hai perso! `);
